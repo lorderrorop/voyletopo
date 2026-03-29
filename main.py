@@ -24,7 +24,7 @@ SUBS_FILE = "subscriptions.json"
 USER_AMOUNTS_FILE = "user_amounts.json"    
 BOT_START_TIME = time.time()    
 
-default_amount = "0.01"    ?
+default_amount = "0.01"    
 
 # Global variables define karo sabse upar    
 final_message = ""  # Initialize empty string    
