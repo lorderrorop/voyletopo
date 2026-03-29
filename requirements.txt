@@ -1,0 +1,4 @@
+requests
+telebot
+bs4
+requests_toolbelt
