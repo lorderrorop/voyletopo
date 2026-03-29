@@ -1,8 +1,8 @@
 import re, random, time, requests, base64
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
-BASE_URL = "www.romelduanemooresr.com"
-SITE_URL = "https://www.romelduanemooresr.com/donations/2584/"
+BASE_URL = "osuawareness.org"
+SITE_URL = "https://osuawareness.org/donation"
 
 def pp(ccx, amount="5.00", retry_count=1):
 
