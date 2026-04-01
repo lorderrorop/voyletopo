@@ -288,7 +288,7 @@ def process_pp_check(message):
         bot.reply_to(message, "Invalid CC format. Please use CC|MM|YYYY|CVV")    
         return    
         
-    processing_msg = bot.reply_to(message, "𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐂𝐚𝐫𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭 🔥")    
+    processing_msg = bot.reply_to(message, "𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐂𝐚𝐫𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭 ⌛")    
         
     card_number = cc.split('|')[0]    
     bin_info = get_bin_info(card_number)    
@@ -353,7 +353,7 @@ stop_checking_global = {}
 
 def process_file_check(message, ccs, user_id):    
     amount = get_user_amount(user_id)    
-    hh = bot.reply_to(message, "<b>- Please Wait Checking Your Cards - At Gate (#paypa_custom)...</b>", parse_mode='HTML').message_id    
+    hh = bot.reply_to(message, "<b>- Please Wait Checking Your Cards - At Gate (#paypal_custom)...</b>", parse_mode='HTML').message_id    
         
     stats = {'charged': 0, 'declined': 0, 'low_funds': 0, 'checked': 0}
     total = len(ccs)    
@@ -397,7 +397,7 @@ def process_file_check(message, ccs, user_id):
                         types.InlineKeyboardButton(f"- Total : {stats['checked']}/{total} -", callback_data='h'),
                         types.InlineKeyboardButton("- Stop Check Cards ! -", callback_data=f'stop_{hh}')
                     )
-                    bot.edit_message_text("<b>- Please Wait Checking Your Cards - At Gate (#paypa_custom)...</b>", 
+                    bot.edit_message_text("<b>- Please Wait Checking Your Cards - At Gate (#paypal_custom)...</b>", 
                                          chat_id=message.chat.id, message_id=hh, reply_markup=key, parse_mode='HTML')
 
                 # Send individual result for hits
@@ -425,7 +425,7 @@ def process_file_check(message, ccs, user_id):
 • Low Funds 💰: {stats['low_funds']}    
 • Declined ❌: {stats['declined']}    
 ━━━━━━━━━━━━━━━━━━━    
-[<a href="https://t.me/danivipgc">⌬</a>] <strong>𝐁𝐨𝐭 𝐁𝐲</strong>↣ <a href="tg://user?id={DARKS_ID}">DANI - 🍀</a>"""    
+[<a href="https://t.me/ERR0R9">⌬</a>] <strong>𝐁𝐨𝐭 𝐁𝐲</strong>↣ <a href="tg://user?id={DARKS_ID}">⏤͟͞𝙀𝙍𝙍𝙊𝙍</a>"""    
         bot.edit_message_text(text=final_stats, chat_id=message.chat.id, message_id=hh, parse_mode='HTML')    
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith('stop_'))    
